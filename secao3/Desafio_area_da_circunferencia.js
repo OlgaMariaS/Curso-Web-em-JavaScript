@@ -1,9 +1,9 @@
 //Área da Circunferencia
 //A = pi * raio^2
 
-const PI = 3.14;
+const PI = Math.PI;
 let raio = 10;
 
-let area = PI * (raio*raio);
+let area = Math.round(PI * (raio*raio));
 
 console.log("A área da circunferencia do seu circulo é " + area);
