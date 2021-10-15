@@ -6,7 +6,7 @@ que os resultados sejam iguais. Caso o delta seja negativo, retorne, ao invés d
 “Delta é negativo”.*/
 
 function bhaskara(a,b,c){
-    let delta = Math.pow(b, 2) * -4 * a * c;
+    let delta = Math.pow(b, 2)-4 * a * c;
     if(delta < 0){
         console.log(`Delta é negativo, seu valor é: ${delta}`);
     } else{
