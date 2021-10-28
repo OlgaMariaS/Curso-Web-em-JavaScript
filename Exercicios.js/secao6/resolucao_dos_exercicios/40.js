@@ -6,7 +6,7 @@ let vetor = [3,5,8.1,9.7];
 
 function conceitos(vetor){
     for(let i = 0; i < vetor.length;i++){
-        if(vetor.length[i] > 0.0 && vetor.length[i] <=4.9 ){
+        if(vetor.length[i] > 0.0 && vetor.length[i] <= 4.9 ){
             console.log("Conceito D");
         }
         if(vetor.length[i] > 5.0 && vetor.length[i] <=6.9 ){
