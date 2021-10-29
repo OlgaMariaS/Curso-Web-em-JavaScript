@@ -1,18 +1,27 @@
 /*34) Construa uma função que receberá duas Strings de tamanhos variados e que retornará True ou False caso
 todos os caracteres (independentemente de ser maiúsculo ou minúsculo) estejam contidos em ambas palavras*/
 
-
-function comparandoPalavras(string1,string2){
-
-    if(string1.length >= string2.length){
-        var maiorString = string1;
-    }else{
-        var maiorString = string2;
+//Pego da resolução do exercicio
+function verificacaoDeString (string1, string2) {
+    let estaContido = true;
+    for (let i = 0; i < string1.length; i++) {
+        let caractereString1 = string1.charAt(i).toLowerCase() //toLowerCase =  converte em minusculo a string 
+        for(let j = 0; j < string2.length; j++){
+            let caractereString2 = string2.charAt(j).toLowerCase()
+            if(caractereString1 == caractereString2) {
+                estaContido = true
+                break
+            } else {
+                estaContido = false
+            }
+        }
+        if(!estaContido) {
+            return estaContido
+        }
     }
+    return estaContido
+ }
 
-    for (let i = 0; i < maiorString.length; i++) {
-        //char exemplo = string1.charAt(i); 
-       
-     }
-}
-comparandoPalavras('amor','AMor');
+ console.log(verificacaoDeString('abc','cba'))
+
+ 
