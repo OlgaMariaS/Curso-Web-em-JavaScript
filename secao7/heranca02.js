@@ -1,0 +1,1 @@
+//Cadeias de protótipos(prototype)
