@@ -4,4 +4,7 @@
 
 const obj = {a:1, b:2, c:3, soma() {return a+b+c}}
 
+console.log(JSON.stringify(obj)); //gerou texto
 
+//json em objeto 
+console.log(JSON.parse('{"a":1, "b": "string", "c": true, "d": [0,0,0]}'));
