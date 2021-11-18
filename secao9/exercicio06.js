@@ -6,13 +6,26 @@ tipo ..."*/
 
 function inverso(valor){
 
-    const tipoDeVariavel = typeof valor;
-   
-    if(tipoDeVariavel == Boolean || tipoDeVariavel == Number){
-        console.log(tipoDeVariavel)
+    let tipoDeVariavel = typeof(valor);
+    
+    if(tipoDeVariavel == 'boolean' || tipoDeVariavel == 'number'){
+        if(tipoDeVariavel == 'boolean'){
+            console.log(!valor);
+        } 
+        if(tipoDeVariavel == 'number'){
+            if(valor >= 0){
+                console.log(-valor);
+            } else{
+                const auxiliarMenosUm = -1;
+                console.log(valor * auxiliarMenosUm);
+            }
+        }
     }else{
         console.log(`booleano ou número esperados, mas o parâmetro é do tipo ${tipoDeVariavel}`);
     }
 }
 
 inverso(true);
+inverso(587);
+inverso(-14);
+inverso(false);
