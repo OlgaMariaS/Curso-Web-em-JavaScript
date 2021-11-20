@@ -3,14 +3,12 @@ array:*/
 
 function criaNovoArray(array){
     let arrayNovo = [];
-    for(let i = 0; i < array.lenght; i++){
-        if(array.lenght[i] == 0){
-
-        }
-        if(x){
-
-        }
+    for (var key in array) {
+        if( key == 0 || (key == (array.length - 1) )){
+        arrayNovo.push(array[key]);
+        }    
     }
+    console.log(arrayNovo);
 }
 
 criaNovoArray([1,2,3,4]);
