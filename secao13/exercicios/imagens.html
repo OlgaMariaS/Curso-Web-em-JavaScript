@@ -1,0 +1,53 @@
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+    alt="aparece isso quando a imagem não carrega"
+    width="200px" height="200px"
+    title="Titulo da imagem">
+</p>
+<p>
+    <img src="http://files.cod3r.com.br/curso-web/imagem2.gif" 
+    alt="GiF"
+    width="200px" height="200px">
+</p>
+<p class="circular">
+    <!--Formato PNG-->
+    <img src="http://files.cod3r.com.br/curso-web/imagem3.png" 
+    alt="RJ" height=200px>
+</p>
+<p class="texto">
+    <img src="http://files.cod3r.com.br/curso-web/avatar.jpg" 
+    alt="Texto" height="100" align='left'>
+    <!--ALIGN faz com que o texto envolva a imagem-->
+    Até a metade dos anos 2000, estudamos na escola que o 
+    sistema solar era composto por nove planetas, o mais distante 
+    deles Plutão
+</p>
+<p class="cidade"></p>
+<p>
+    <picture>
+        <source srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media"(min-width:600px)">
+        <!--A img só será exibida quando a medida for maior que 600-->
+        <img src="http://files.cod3r.com.br/curso-web/logo-estreita.png">
+    </picture>
+</p>
+<style>
+    .circular {
+        width: 200px;
+    }
+    .texto{
+        width: 400;
+    }
+    .texto img{
+        margin-right: 10px;
+    }
+    .cidade{
+        width: 300px;
+        height: 300px;
+        background-image:url(http://files.cod3r.com.br/curso-web/imagem4.jpg) ;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 142%;
+    }
+    
+</style>
