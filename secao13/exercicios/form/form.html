@@ -1,0 +1,48 @@
+<h1>Formulário</h1>
+
+<form method="POST">
+    <!--não quer exibir para o usuario-->
+    <input type="hidden" name="escondido">
+    <input type="text" name="nome">
+    <!--name é o objeto onde esta armazenado a resposta do usuario-->
+    <input type="password" name="senha">
+    <textarea name="bio" cols="30" rows="10"></textarea>
+    <div>
+        <input type="radio" name="tipo" value="a">a
+        <input type="radio" name="tipo" value="b">b
+        <input type="radio" name="tipo" value="c">c
+        <input type="radio" name="tipo" value="d">d
+        <!--value vai ser o valor enviado ao backend-->
+    </div>
+    <div>
+        <input type="checkbox" name="ativo">e
+        <input type="checkbox" name="ativo">f
+        <input type="checkbox" name="ativo">g
+    </div>
+    <select name="estado">
+        <option>Selecione</option>
+        <option value="pr">Paraná</option>
+        <option value="am">Amazonas</option>
+    </select>
+    <br>
+    <select name="trabalhos" multiple size='3'>
+      <!--multiplas opções-->
+        <option value="programador">programador</option>
+        <option value="administrador">administrador</option>
+        <option value="bancario">bancario</option>
+    </select>
+    <br>
+    <button formaction="http://localhost:3003/usuarios/3">Alterar</button>
+    <br>
+    <!--somente quando clicado neste botão que ira redirecionar a outra pagina-->
+    <button formaction="http://localhost:3003/usuarios">Incluir</button>
+</form>
+<style>
+    input,textarea{
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type=radio], input[type=checkbox],select{
+        display: inline;  
+    }
+</style>
