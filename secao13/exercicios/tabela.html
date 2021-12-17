@@ -1,0 +1,67 @@
+<style>
+    table{
+        border-collapse: collapse;
+    }
+    th,td{
+        padding: 10px; /*espaçamento*/
+    }
+    thead tr{
+        border-bottom:solid 3px rgb(75, 150, 211);
+    }
+    tbody tr:hover{
+        /*ao passar o mouse em cima ele colori*/
+        background-color:rgb(207, 228, 241) ;
+    }
+    tfoot{
+        background-color:rgb(75, 150, 211) ;
+        color: floralwhite;
+        font-weight: bold;
+    }
+</style>
+<table>
+    <caption>Hortaliças</caption>
+    <thead>
+        <tr> 
+            <!--th = coluna-->
+            <th>Vegetal</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <!--td = linha-->
+            <td>beterraba</td>
+            <td>2</td>
+            <td>5</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Batata Doce</td>
+            <td>0.80</td>
+            <td>7</td>
+            <td>5,60</td>
+        </tr>
+        <tr>
+            <td>Banana</td>
+            <td>1</td>
+            <td>14</td>
+            <td>14</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <!--colspan ou rowspan aumentam o tamanha da linha/coluna-->
+            <td colspan="3">Total</td>
+            <td>29,60</td>
+        </tr>
+    </tfoot>
+</table>
+<a href="index.html">voltar</a>
+<!-- SUPOSIÇÃO DE UMA FUNÇÃO PARA  TOTAL PORÉM NÃO SEI INTEGRAR JS COM HTNK AINDA
+<script>
+    function total(Preço,Quantidade){
+       return total = Preço * Quantidade;
+    }
+</script>-->
