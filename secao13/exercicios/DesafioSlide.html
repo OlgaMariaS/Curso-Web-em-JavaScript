@@ -57,8 +57,49 @@
         
     </style>
     <script>
-        function mostraNaTela(){
-            
+        //passo é de quanto em quanto irá andar
+        function mover(elem,inicio, fim, passo, callback){
+            //inicio - passo = posição inicial de 10, menos um passo de 2, posição atual 8 
+            const novoInicio = inicio - passo;
+            if(novoInicio >= fim){
+                //recebe formato pixel e no elemento a esquerda
+                elem.style.left = novoInicio + 'px';
+                //função arrow passada como parametro para a função setTimeout será executada a cada 10 milisegundos
+                setTimeout(() => mover(elem,novoInicio,fim,passo,callback),7)
+            }else{
+                callback();
+            }
         }
-    </script>
+        /*const p = document.querySelector('[slide]>p');
+        p.style.display = 'block';
+        mover(p,1200,-400,5,()=>{
+            console.log('terminou')
+        })*/
+        function slide(){
+            const elementos = document.querySelectorAll('[slide]>p')
+            //array.from transforma NODE LIST em array, e querySelectorAll é node list
+            const slides = Array.from(elementos);
+            exibirSlide(slides, slides[0]);
+        }
+        function exibirSlide(slides,slide){
+            slide.style.display = 'block';
+            const inicio = innerWidth;
+            //innerWidth = propriedade da largura da pagina
+            const fim = -slide.clientWidth;
+
+            slide.style.left = `${inicio}px`;
+
+            mover(slide,inicio,fim,7,()=>{
+            //a partir daqui é um função que rodará todos os elementos do array 
+            slide.style.display = 'none';
+            exibirSlide(slides,getProximo(slides,slide))
+        })
+        }      
+    
+        function getProximo(lista,atual){
+            const i = lista.indexOf(atual) + 1
+            return i< lista.length ? lista[i] : lista[0];
+        }
+        slide();
+</script>
 </div>
