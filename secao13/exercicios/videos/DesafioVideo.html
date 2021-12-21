@@ -2,7 +2,7 @@
 autoplay = inicia o video automatico
 controlslist = some o botao de download-->
 
-<video id="meuVideo" controls autoplay controlslist = 'nodownload'>
+<video id="meuVideo" controlslist = 'nodownload'>
     <source src="http://files.cod3r.com.br/curso-web/video.mp4" typeof="video.mp4" >
 </video>
 <div progresso="meuVideo" class="progresso">
@@ -36,3 +36,18 @@ controlslist = some o botao de download-->
         width: 30%;
     }
 </style>
+<script>
+    function configurarVideo(){
+        const video = document.getElementById(id)
+        //evita o download do video pelo botão diretio do mouse
+        video.oncontextmenu = () => false;
+
+        document.querySelector(`[play=${id}]`).onclick = e => video.play();
+        document.querySelector(`[pause=${id}]`).onclick = e => video.pause();
+
+        setInterval(() => {
+            
+        })
+    }
+    configurarVideo('meuVideo')
+</script>
