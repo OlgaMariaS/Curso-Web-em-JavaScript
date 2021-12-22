@@ -2,13 +2,11 @@
 autoplay = inicia o video automatico
 controlslist = some o botao de download-->
 
-<video id="meuVideo" controlslist = 'nodownload'>
+<video id="meuVideo" controls controlslist = 'nodownload'>
     <source src="http://files.cod3r.com.br/curso-web/video.mp4" typeof="video.mp4" >
 </video>
 <div progresso="meuVideo" class="progresso">
-    <div>
-
-    </div>
+    <div></div>
 </div>
 <div>
     <button play="meuVideo">Play</button>
@@ -28,16 +26,16 @@ controlslist = some o botao de download-->
     }
     /*altera a div da classe progresso*/
     .progresso > div {
-        background-color: red;
+        background-color: rgb(125, 219, 196);
         color: #fff;
         height: 100%;
         text-align: right;
         font-size: 14px;
-        width: 30%;
+        width: 0%;
     }
 </style>
 <script>
-    function configurarVideo(){
+    function configurarVideo(id){
         const video = document.getElementById(id)
         //evita o download do video pelo botão diretio do mouse
         video.oncontextmenu = () => false;
@@ -46,8 +44,12 @@ controlslist = some o botao de download-->
         document.querySelector(`[pause=${id}]`).onclick = e => video.pause();
 
         setInterval(() => {
-            
-        })
+            //percentual do video rodando hora atual/duração x 100 para ser percentual 
+            const percentual = (video.currentTime / video.duration) * 100;
+            const valorDiv =  document.querySelector(`progresso=${id}| > div`);
+            valorDiv.style.width = `${percentual}%`;
+            valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+        }, 500)
     }
     configurarVideo('meuVideo')
 </script>
