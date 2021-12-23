@@ -5,7 +5,7 @@ controlslist = some o botao de download-->
 <video id="meuVideo" controls controlslist = 'nodownload'>
     <source src="http://files.cod3r.com.br/curso-web/video.mp4" typeof="video.mp4" >
 </video>
-<div progresso="meuVideo" class="progresso">
+<div progressoVideo="meuVideo" class="progresso">
     <div></div>
 </div>
 <div>
@@ -46,7 +46,7 @@ controlslist = some o botao de download-->
         setInterval(() => {
             //percentual do video rodando hora atual/duração x 100 para ser percentual 
             const percentual = (video.currentTime / video.duration) * 100;
-            const valorDiv =  document.querySelector(`progresso=${id}| > div`);
+            const valorDiv =  document.querySelector(`[progressoVideo=${id}] > div`);
             valorDiv.style.width = `${percentual}%`;
             valorDiv.innerHTML = `${percentual.toFixed(1)}%`
         }, 500)

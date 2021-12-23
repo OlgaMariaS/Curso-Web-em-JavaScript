@@ -5,12 +5,34 @@
     <meta charset="UTF-8">
     <title>Anatomia CSS</title>
     <style>
-        /* ... */
+        .seletor{
+            color:#fff;
+            font-size: 30px;
+            text-align: center;
+            /*multiplos valores, chamada de shorthand property*/
+            border:dashed 5px navy;
+            /*alternativas*/
+            font-family: Arial, Helvetica, sans-serif;
+            /*chama funções
+            neste caso pego 100% da tela e diminui 100 px*/
+            width: calc(100% - 100px);
+            background-color: rgb(140, 170, 226);
+        }
+         /*Pseudo-Classe*/
+        .seletor:hover{
+            /*somente será aplicada quando o mouse passar em cima*/
+            background-color: darkcyan;
+        }
+        /*Pseudo Elemento*/
+        .seletor::first-letter{
+            font-size: 35px;
+        }
+        /*Padrão nomenclatura (dash-case ou camelCase)*/
     </style>
 </head>
 
 <body>
-    <div class="selector">Conteúdo</div>
+    <div class="seletor">Conteúdo</div>
 </body>
 
 </html>

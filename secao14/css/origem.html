@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
-
+<!--CSS tem efeito cascata-->
 <head>
     <meta charset="UTF-8">
     <title>Origem CSS: Externo, Interno e Inline</title>
     <style>
-        /* ... */
+       body{
+           background-color: darkcyan;
+          /*interno*/
+       }
     </style>
+    <link rel="stylesheet" href="css/externo.css">
+        <!--externo-->
 </head>
 
-<body>
+<body style="background-color: darkgoldenrod;">
+    <!--inline-->
     <h1>E agora?</h1>
 </body>
 
