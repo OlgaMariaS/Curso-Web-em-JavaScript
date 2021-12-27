@@ -5,7 +5,29 @@
     <meta charset="UTF-8">
     <title>Box Model</title>
     <style>
-        /* ... */
+        /* margem>borda>padding>conteudo
+        
+        padding: valor1,       valor2 
+                top/em baixo    esquerda-direita
+        padding:1, 2, 3, 4
+        1=top 2=direita 3=baixo 4=esquerda (sentido horario)
+        */
+        body{
+            font-size: 80px;
+        }
+        .c1{background-color: khaki;}
+        .c2{background-color:lightpink;}
+        .c3{background-color:lightskyblue;}
+        div{
+            float:left;
+            padding: 10px 50px 10px 50px;
+            margin:0px 20px 40px;
+            border: dashed 3px black ;
+        }
+        div:hover{
+            background-color: chocolate;
+            color: cornsilk;
+        }
     </style>
 </head>
 

@@ -6,7 +6,33 @@
     <title>CSS Selectors</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*
+        Seletores:
+        * universal, da pagina toda
+        elemento, tipo todos h1, todos a tag P
+        .class para determinados coisas
+        #id para determinados e navegação 
+        [atributação]
+
+        :pseudo-classe ou ::pseudo-elemento
+
+        Combinação de seletores ->
+        div+p  adjacente
+        div>p  as primeiras tag p dentro da div, quaisquer outras tag p dentro de outras tag não irão
+        div~p apos a div qualquer tag p 
+        div p todas as tag p da div
+        div, class   aplica algo nas duas coisas 
+        h1 + p  quando depois da primeira tag surgir a segunda somente assim terá o design 
+        */
+        /*[feira*=sa] pega os atributos cujo valor tenha as letra SA*/
+        /*span:nth-child(1) pega o primeiro filho de alguem cujo a primeira tag seja SPAN*/
+        /*span:nth-child(odd) pega pega somente os pares/impares*/
+        /*section > span:nth-of-type(2) pega o segundo elemento de dentro de span que estiver dentro de section*/
+        span:nth-child(1){
+            color: rgb(255, 80, 80);
+            background-color: rgb(223, 199, 199);
+        }
+
     </style>
 </head>
 
@@ -29,7 +55,7 @@
             </ol>
             <div id='aninhado' class='tag'>
                 <div class="tag">
-                    <section class='tag'>
+                    <section class='tag nolabel'>
                         <span class='tag'>1</span>
                         <p class='tag'>2</p>
                         <span class='tag'>3</span>
