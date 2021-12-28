@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <title>Altura e Largura</title>
     <style>
+        html{
+            height: 100%;
+        }
         body {
             font-size: 40px;
             background-color: coral;
+            height: 100%;
+            margin: 0;
         }
 
         div {
@@ -16,6 +21,15 @@
 
         span {
             background-color: dodgerblue;
+        }
+        span,div{
+            /*porcentagens são relativos ao tamanho do body
+            *display inline não considera alt e larg
+            *por padrão html não ocupa toda a altura
+            */
+            width: 50%;
+            height: 50%;
+            display: block;
         }
     </style>
 </head>
