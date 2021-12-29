@@ -6,6 +6,65 @@
     <title>Position</title>
     <style>
         /* ... */
+        div{
+            font-size: 60px;
+            padding: 30px;
+            border: solid 5px #222;
+            color: #fff;
+        }
+        .static {
+            /*posição estatica é padrão*/
+            top:100px ;
+            left: 100px;
+            background-color: cornflowerblue;
+        }
+        .fixed{
+            /*fica parado na tela*/
+            position: fixed;
+            bottom: 30px;
+            right: 0px;
+            background-color: darkkhaki;
+        }
+        .relative1{
+            /*relativo as posições do componente anterior a ele*/
+            position: relative;
+            left: 50px;
+            top: 5px;
+            background-color: darksalmon;
+        }
+        .absolute1{
+            /*passa por cima de elementos pois é absoluto a eles*/
+            position: absolute;
+            left: 350px;
+            top: 120px;
+            background-color: darkolivegreen;
+        }
+        .relative2{
+            position: relative;
+            left: 250px;
+            top: 2000px;
+            width: 200px;
+            height: 200px;
+            background-color: lightseagreen;
+        }
+        .absolute2{
+            /*absoluto somente ao elemento pai dele
+            SÓ É ASSIM POIS o pai este relativo pois se fosse estatico(padrão) ele seria absoluto referente a pagina
+            */
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            width: 20px;
+            height: 20px;
+            background-color: sienna;
+        }
+        .sticky{
+            /*ele move na tela mas ao chegar ao fim da tela não some*/
+            position: -webkit-sticky; /*preciso fazer isso para ocorrer o necessário no navegador SAFARI */
+            position: sticky;
+            background-color:turquoise;
+            top: 0px;
+        }
     </style>
 </head>
 
