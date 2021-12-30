@@ -6,7 +6,53 @@
     <title>Flexbox #01</title>
     <link rel="stylesheet" href="css/tag.css">
     <style>
-        /* ... */
+        /*flex box = display: flex
+        main axis = principal cross axis= eixo que corta
+        tamanho não influencia e sim DIREÇÃO
+        */
+
+        div{
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+
+        .big{
+            font-size: 1.5em;
+        }
+        .flex-container{
+            display: flex;
+            /*padrão é os iten ficarem em colunas*/
+            flex-direction: column;
+            flex-direction: column-reverse;/*(ROW-REVERSE=REVERSO DA LINHA)invertido a ordem dos elemento*/
+            flex-direction: row;
+            width: 50%;
+            flex-wrap: wrap;/*quebra a linha*/
+            flex-wrap: wrap-reverse;/*quebra a linha, inversa a de cima sobre*/
+            height: 200px;
+            flex-flow:column-reverse wrap ;
+            flex-flow: row wrap;/*linha e quebra*/
+
+            justify-content: flex-start; /*justifica sendo do inicio ou END com base no MAIN AXIS*/
+            justify-content: center;
+            justify-content: space-around;/*coloca espaço visando distribuição igual*/
+            justify-content: space-between;/*espaço no meio */
+        
+            /*CROSS AXIS*/
+            height: 400px;
+            align-items: stretch;
+            align-items: baseline;/*alinha pela base*/
+            align-items: flex-start;/**/
+            align-items: flex-end;
+            align-items: center;
+            
+            /*Mais de uma linha*/
+            align-content:flex-start;
+            align-content: flex-end;
+            align-content: center;
+            align-content: space-around;
+            align-content: space-between;
+        }
     </style>
 </head>
 

@@ -8,20 +8,18 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <style>
         *{
-            color: seashell;
             box-sizing: border-box;
         }
         body{
             margin: 0;
             background-color: lightgray;
+            font-family: "Oswald";
         }
         .cabecalho{
-            background-color: #000;
-            font-size: 25px;
-            font-family: "Oswald";
+            background-color: #333;       
             width: 100%;
-            height: 80px;
-            box-sizing: content-box;
+            height: 80px;/*todo o cabeçalho terá 80px */
+            box-sizing: content-box;/*borda para fora*/
             border-bottom: solid 5px skyblue;
         }
         .logo{
@@ -46,23 +44,48 @@
             display: inline-block;
             vertical-align: top;
             height: 80px;
-            
+            padding: 25px;
+        }
+        .menu ul{
+            padding:0 ;
+            margin: 0;
+        }
+        .menu li{
+            display: inline-block;
+        }
+        .cabecalho a{
+            text-decoration: none;
+            color: #eee;
+            font-size: 1.3em;
+        }
+        .menu a{
+            padding: 15px;
         }
         .autenticacao{
             float: right;
+            height: 80px;
+            padding: 25px;
         }
+       
         .botaoDestaque{
             background-color: red;
-            border-radius:70px;
-            margin: 8px;
+            border-radius:30px;
+            margin: 10px;
+            padding: 10px 25px;
             
         }
-        li:hover, .autenticacao>a:hover{
+        .menu a:hover, .autenticacao a:hover{
                 background-color: skyblue;
                 color: #000;
         }
-        a{
-            text-decoration: none;
+        @media(min-width:700px){
+            .menu-toggle{display: none;}
+        }
+        @media(max-width: 680px){
+            .menu {display: none;}
+        }
+        @media(max-width: 910px){
+            .autenticacao {display: none;}
         }
     </style>
 </head>
@@ -100,7 +123,21 @@
     </header>
 
     <script>
-        // ...
+        //onhashchange muda sempre que o HASH(#) da janela muda
+        window.onhashchange = function(evento){
+            //pega somente o que vem depois do #, ou indice 1, indice 0 é o que vem antes
+            const oldURL = evento.oldURL.split('#')[1];
+            const newURL = evento.newURL.split('#')[1];
+            console.log(oldURL, newURL);
+
+            const oldMenu = document.querySelector(`.menu a[href='#${oldURL}']`);
+            const newMenu = document.querySelector(`.menu a[href='#${newURL}']`);
+//quando clicado em novo link que tenha url igual a href = #xxx sera selecione. e quando selecionadp outro s seleção 
+//sairá do antigo e irá selecionar o novo
+            oldMenu && oldMenu.classList.remove('selected');
+            newMenu && newMenu.classList.add('selected')
+
+        }
     </script>
 </body>
 
