@@ -22,7 +22,34 @@
         <p>Fim</p>
     </div>
     <script>
-        // ...
+        function log(){
+            console.log(this)
+        }
+        HTMLCollection.prototype.log = log;
+        HTMLElement.prototype.log = log;
+        NodeList.prototype.log = log;
+        Node.prototype.log = log;
+
+        const lista = document.querySelector('div ul');
+        lista.parentNode.log(); //esta dizendo para pegar o PAI da UL que seria a div
+        lista.childNodes.log();//pega filho
+
+        const primeiro = lista.firstChild;
+        primeiro.log();
+        primeiro.nextSibling.log();//pega proximo elemento depois do primeiro
+
+        const ultimo = lista.lastChild;
+        ultimo.log();
+        ultimo.previousSibling.log(); // pega ultimo elemento
+
+        lista.children.log(); //chama todas as LI
+        lista.firstElementChild.log(); //primeiro tag definida
+        lista.lastElementChild.log(); //ultima tag
+        lista.parentNode.previousSibling.log();//pede para buscar o elemento irmão da div que envolvem a lista ou seja o INICIO
+        lista.parentNode.nextSibling.log();//proximo elemento, ou seja o FIM
+        
+        //MAIS RECOMENDADO
+        document.querySelectorAll('div ul li').log();
     </script>
 </body>
 
