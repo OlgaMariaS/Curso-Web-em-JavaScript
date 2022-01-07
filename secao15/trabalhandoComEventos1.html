@@ -8,10 +8,25 @@
 </head>
 
 <body class="conteudo exercicio">
-    <div>
-        <a href="https://google.com.br">Google</a>
+    <div>                        <!--  associado o clique a tag -->
+        <a espera-um-pouco href="https://google.com.br" onclick="navegarEm5(event)">Google</a>
     </div>
     <script>
-        // ...
+        //ao clicar chamara a função
+        function navegarEm5(evento){
+            evento.preventDefault()
+            console.log("Saindo em 5s...")
+            setTimeout(()=>{ 
+                //propriedade TARGET, é o elemento do html que dispara o evento que chama a função
+                const link = evento.target
+                window.location.href = link.href;
+            },5000)
+        }
+        // metodos de associar a tag a função
+        const a = document.querySelector('a');
+        a.onclick = navegarEm5;
+
+        const a = document.querySelector('[espera-um-pouco]');
+        a.onclick = navegarEm5;
     </script>
 </body>
