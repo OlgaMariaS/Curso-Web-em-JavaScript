@@ -40,9 +40,9 @@
     document.querySelectorAll('[expandir]').forEach(folder => {
         folder.onclick =  function(e){
             //proximo elemento apos o identificador EXPANDIR
-            const ul = folder.nextElementSibling;
-            const auxiliar = ul.style.display;
-            ul.style.display = auxiliar === 'none' ? 'block':'none'
+            const proximoElemento = folder.nextElementSibling;
+            const auxiliar = proximoElemento.style.display;
+            proximoElemento.style.display = auxiliar === 'none' ? 'block':'none'
         }
     })
 </script>
