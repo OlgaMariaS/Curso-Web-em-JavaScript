@@ -1,0 +1,19 @@
+{
+    "productus": [
+        {
+            "id":1,
+            "name": "Caneta", 
+            "price": 1.20
+        },
+        {
+            "id":2,
+            "name": "Vaio sony", 
+            "price": 3.200
+        },
+        {
+            "id":3,
+            "name": "Redmi 8 pro", 
+            "price": 1.200
+        }
+    ]
+}
