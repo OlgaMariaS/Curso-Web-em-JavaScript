@@ -15,7 +15,7 @@
 }
 .passaro{
     position: absolute;
-    width: 60px;
+    width: 40px;
     left: calc(50% - 30px);
     bottom: 50%;
 }
@@ -52,4 +52,5 @@
     right: 10px;
     font-family: Pixel;
     font-size: 70px;
+    z-index: 100;
 }
