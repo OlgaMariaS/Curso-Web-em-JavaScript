@@ -1,19 +1,29 @@
 {
-    "productus": [
-        {
-            "id":1,
-            "name": "Caneta", 
-            "price": 1.20
-        },
-        {
-            "id":2,
-            "name": "Vaio sony", 
-            "price": 3.200
-        },
-        {
-            "id":3,
-            "name": "Redmi 8 pro", 
-            "price": 1.200
-        }
-    ]
+  "productus": [
+    {
+      "id": 1,
+      "name": "Caneta",
+      "price": 1.2
+    },
+    {
+      "id": 2,
+      "name": "Vaio sony",
+      "price": 3.2
+    },
+    {
+      "id": 3,
+      "name": "Redmi 8 pro",
+      "price": 1.2
+    },
+    {
+      "name": "lápis",
+      "price": "2",
+      "id": 4
+    },
+    {
+      "name": "abc",
+      "price": "3",
+      "id": 5
+    }
+  ]
 }

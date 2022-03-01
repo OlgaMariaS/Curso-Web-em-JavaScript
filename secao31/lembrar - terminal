@@ -3,3 +3,6 @@ npm start em pasta backend e frontend pra codigo rodar
 http://localhost:4200/
 
 https://materialdesignicons.com/
+
+*nos componentes são os metodos e atributos VISUAIS
+já no SERVICE é destinado a tudo backend ou NÃO VISUAL
