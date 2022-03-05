@@ -27,5 +27,14 @@ export class ProductService {
   read(): Observable<Product[]>{
     return this.http.get<Product[]>(this.baseUrl)
   }
+  readById(id: string): Observable<Product>{
+    const url = `${this.baseUrl}/${id}` // está sendo concatenado a url da lista deprodutos, com / e o identificar do produto
+    return this.http.get<Product>(url)
+  }
+  update(product: Product): Observable<Product>{
+    const url = `${this.baseUrl}/${product.id}`
+    return this.http.put<Product>(url, product)
+  }
+  
 }
 //VOID: ele identifica que a function não retorna nada, normalmente são function que precisam ser executadas mas não de retorno
