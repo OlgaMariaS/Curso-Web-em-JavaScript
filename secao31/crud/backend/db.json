@@ -1,11 +1,6 @@
 {
   "productus": [
     {
-      "id": 1,
-      "name": "Caneta",
-      "price": 1.2
-    },
-    {
       "id": 2,
       "name": "Vaio sony",
       "price": 3.2
@@ -21,8 +16,8 @@
       "id": 4
     },
     {
-      "name": "abc",
-      "price": "3",
+      "name": "mi band",
+      "price": "120",
       "id": 5
     }
   ]

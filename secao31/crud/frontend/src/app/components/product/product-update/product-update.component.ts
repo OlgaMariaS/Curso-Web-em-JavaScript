@@ -18,18 +18,18 @@ export class ProductUpdateComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get("id") || ''; //esta linha o Henrique e a Bianca ajudaram 
-    //ficou tipo sinforme o id OU deixe em branco
+    const id = this.route.snapshot.paramMap.get("id") || '';
+    //Se informe o id (identificar ou texto do campo )OU deixe em branco
     this.productService.readById(id).subscribe((product) => {
       this.product = product;
     });
   }
-
+//botão salvar que atualiza o produto
   updateProduct(): void {
-    // this.productService.update(this.product).subscribe(() => {
-    //   this.productService.showMessage("Produto atualizado com sucesso!");
-    //   this.router.navigate(["/products"]);
-    // });
+    this.productService.update(this.product).subscribe(() => {
+      this.productService.showMessage("Produto atualizado com sucesso!");
+      this.router.navigate(["/products"]);
+    });
   }
 
   cancel(): void {
