@@ -5,7 +5,7 @@ let abelha = 5;
 //exemplo de var e let 
 
 teste = 28;
-// let abelha = 45; isso não pode ocorrer 
+// let abelha = 45; isso não pode ocorrer, let não aceita redeclaração 
 abelha = 96; //isso pode
 
 console.log(teste, abelha);
